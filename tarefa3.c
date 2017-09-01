@@ -39,8 +39,26 @@ int main()
 	}
 	
 	//escrevendo a matriz
-	  
-	for (i=0;i<lin; i++ )
+	printf ("\nA matriz fornecida é:\n");
+	for (i=0; i<lin; i++ )
+   	{	 for ( j=0; j<col; j++ )
+    		{
+       			printf ("%.1f \t", mat[ i ][ j ]);
+    		}
+		printf("\n\n");	
+ 	}
+
+	//zerando segunda linha
+	printf("Zerando a segunda linha:\n");
+	for (i=0; i<col; i++)
+	{
+		mat[1][0] = mat[1][0] - (mat[1][0]/mat[0][0])*mat[0][1];
+
+	}
+
+	//escrevendo a matriz
+	printf ("Reescrevendo a Matriz:\n");
+	for (i=0; i<lin; i++)
    	{	 for ( j=0; j<col; j++ )
     		{
        			printf ("%.1f \t", mat[ i ][ j ]);
@@ -49,5 +67,7 @@ int main()
  	}
 
 }
+
+
 
 

@@ -67,7 +67,7 @@ int main()
  	}
 
 	
-	//zerando a segunda e terceira linha
+	//zerando primeiro elemento da terceira e quarta linha
 	printf("Zerando a segunda e terceira linha:\n");
 	for (i=0; i<col; i++)
 	{
@@ -86,7 +86,41 @@ int main()
 		printf("\n\n");	
  	}
 		
+	//zerando os segundos elementos da terceira e quarta linha
+	printf("Zerando a segunda e terceira linha:\n");
+	for (i=0; i<col; i++)
+	{
+		mat[2][i+1] = mat[2][i+1] + mat[1][i+1];
+		mat[3][i+1] = mat[3][i+1] - 2.0*mat[1][i+1];
+
+	}
 	
+	//Rescrevendo a matriz
+	printf ("Reescrevendo a Matriz:\n");
+	for (i=0; i<lin; i++)
+   	{	 for ( j=0; j<col; j++ )
+    		{
+       			printf ("%.1f \t", mat[ i ][ j ]);
+    		}
+		printf("\n\n");	
+ 	}
+
+	//zerando os segundos elementos da terceira e quarta linha
+	printf("Zerando o terceiro elemento da quarta linha:\n");
+	for (i=0; i<col; i++)
+	{
+		mat[3][i+2] = mat[3][i+2] + 5.0*mat[1][i+1];
+	}
+	
+	//Rescrevendo a matriz
+	printf ("Reescrevendo a Matriz:\n");
+	for (i=0; i<lin; i++)
+   	{	 for ( j=0; j<col; j++ )
+    		{
+       			printf ("%.1f \t", mat[ i ][ j ]);
+    		}
+		printf("\n\n");	
+ 	}
 }
 
 

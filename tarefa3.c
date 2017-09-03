@@ -52,7 +52,7 @@ int main()
 	printf("Zerando a segunda linha:\n");
 	for (i=0; i<col; i++)
 	{
-		mat[1][0] = mat[1][0] - (mat[1][0]/mat[0][0])*mat[0][1];
+		mat[1][i] = mat[1][i] - (mat[1][i]/mat[0][0])*mat[0][i];
 
 	}
 
@@ -66,13 +66,13 @@ int main()
 		printf("\n\n");	
  	}
 
-
-	//zerando terceira linha
+	
+	//zerando a segunda e terceira linha
 	printf("Zerando a segunda e terceira linha:\n");
 	for (i=0; i<col; i++)
 	{
-		mat[2][0] = mat[2][0] - (mat[2][0]/mat[0][0])*mat[0][1];
-		mat[3][0] = mat[3][0] - (mat[3][0]/mat[0][0])*mat[0][1];
+		mat[2][i] = mat[2][i] - (mat[2][i]/mat[0][0])*mat[0][i];
+		mat[3][i] = mat[3][i] - (mat[3][i]/mat[0][0])*mat[0][i];
 
 	}
 	
@@ -85,7 +85,8 @@ int main()
     		}
 		printf("\n\n");	
  	}
-
+		
+	
 }
 
 

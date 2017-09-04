@@ -20,6 +20,7 @@ int main()
 	//contadores
 	int i, j;
 	int lin, col;
+	float x1, x2, x3, x4;
 	
 	printf("\nInforme o número de Linhas da Matriz:\n");
 	scanf("%d", &lin);
@@ -121,6 +122,16 @@ int main()
     		}
 		printf("\n\n");	
  	}
+
+	//encontrando a solução
+	
+	x4 = mat[3][4]/mat[3][3];
+	x3 = (mat[2][4] - x4*mat[2][3])/mat[2][2] ;
+	x2 = (mat[1][4] - x4*mat[1][3] - x3*mat[1][2])/mat[1][2];
+	x1 = (mat[0][4] - x4*mat[0][3] - x3*mat[0][2] - x2*mat[0][1])/mat[0][0];4
+
+	printf("A solução será: \n x1 = %.2f; \n x2 = %.2f; \n x3 = %.2f ;\n x4 = %.2f ;\n", x1, x2, x3, x4);
+	
 }
 
 
